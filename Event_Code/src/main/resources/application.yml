@@ -10,12 +10,14 @@ spring:
 
   jpa:
    hibernate:
-   ddl-auto: update   # ou create-drop
+   ddl-auto: none
    show-sql: true
 
   flyway:
-     enabled: true
-     locations: classpath:db/migration
-     logging:
-       level:
-         org.flywaydb: DEBUG
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+    repair: true
+    logging:
+      level:
+        org.flywaydb: DEBUG

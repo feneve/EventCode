@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 import java.time.LocalDateTime;
 @Entity
@@ -25,18 +27,20 @@ public class EventoEntitys {
 
     @Column(nullable = false)
     private Integer capacidade;
-    @Column(columnDefinition = "tipos")
+
     @Enumerated(EnumType.STRING)
+    @Column(name = "tipo", nullable = false)
     private TipoEvento tipo;
 
+
     @Column(name = "inicio_evento", nullable = false)
-    private LocalDateTime inicioEvento;
+    private LocalDateTime inicioevento;
 
     @Column(name = "termino_evento", nullable = false)
-    private LocalDateTime terminoEvento;
+    private LocalDateTime terminoevento;
 
     @Column(name = "local_evento", nullable = false)
-    private String localEvento;
+    private String localevento;
 
     @Column(nullable = false, unique = true)
     private String identificador;
