@@ -16,14 +16,16 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class EventoEntitys {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
     @Column(nullable = false, length = 255)
     private String nome;
 
+    @Column(nullable = false)
     private String descricao;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(nullable = false)
     private Integer capacidade;
@@ -40,7 +42,7 @@ public class EventoEntitys {
     private LocalDateTime terminoevento;
 
     @Column(name = "local_evento", nullable = false)
-    private String localevento;
+    private String local_evento;
 
     @Column(nullable = false, unique = true)
     private String identificador;

@@ -4,5 +4,5 @@ import dev.feneves.Event_Code.cors.entitys.Evento;
 
 public interface criarEventoCase {
 
-    public Evento criarEvento(Evento evento);
+    public Evento execute (Evento evento);
 }

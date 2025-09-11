@@ -1,6 +1,10 @@
+server:
+  port: 8080
+
 spring:
   application:
     name: EventCode
+
 
   datasource:
     url: jdbc:postgresql://localhost:5431/EventClean
