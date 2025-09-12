@@ -6,10 +6,12 @@ import dev.feneves.Event_Code.infrastructure.persistence.EventoEntitys;
 import org.mapstruct.Mapper;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class EventoEntityMapper {
 
-    public EventoEntitys toEntitys(Evento evento){
+    public EventoEntitys toEntitys(Evento evento) {
         return new EventoEntitys(
                 evento.nome(),
                 evento.descricao(),
@@ -23,7 +25,8 @@ public class EventoEntityMapper {
                 evento.organizador()
         );
     }
-    public Evento toDomin (EventoEntitys evento){
+
+    public Evento toDomin(EventoEntitys evento) {
         return new Evento(
                 evento.getNome(),
                 evento.getDescricao(),
