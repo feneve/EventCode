@@ -106,6 +106,8 @@ http://localhost:8080/eventos
 ### ➕ Criar Evento
 `POST /eventos`
 
+Você pode **informar o identificador** do evento manualmente **ou deixar em branco**, que o sistema irá **gerar automaticamente um identificador único**.
+
 **Request body:**
 ```json
 {
@@ -120,6 +122,8 @@ http://localhost:8080/eventos
   "organizador": "Associação Nacional de Tecnologia"
 }
 ```
+
+> 🔹 Caso o campo **`identificador`** não seja enviado, o sistema criará automaticamente um valor único (ex.: `EVT-12345`).
 
 **Response (200):**
 ```json
@@ -169,6 +173,7 @@ http://localhost:8080/eventos
 
 ## 🧑‍💻 Autor
 
-Projeto desenvolvido por Felipe Neves como estudo e aplicação de **Spring Boot + Clean Code + Clean Architecture**.
+Projeto desenvolvido por **[Seu Nome]** como estudo e aplicação de **Spring Boot + Clean Code + Clean Architecture**.
 
 ---
+
