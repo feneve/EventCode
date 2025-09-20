@@ -44,7 +44,7 @@ public class EventoEntitys {
     @Column(name = "local_evento", nullable = false)
     private String local_evento;
 
-    @Column(nullable = false, unique = true)
+    @Column( unique = true)
     private String identificador;
 
     private String organizador;

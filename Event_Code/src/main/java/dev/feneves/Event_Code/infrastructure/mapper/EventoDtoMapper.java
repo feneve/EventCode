@@ -42,6 +42,21 @@ public class EventoDtoMapper {
                 evento.organizador()
         );
     }
+
+    public EventoDto toEntity(EventoEntitys evento) {
+        return new EventoDto(
+                evento.getNome(),
+                evento.getDescricao(),
+                evento.getId(),
+                evento.getCapacidade(),
+                evento.getTipo(),
+                evento.getInicioevento(),
+                evento.getTerminoevento(),
+                evento.getLocal_evento(),
+                evento.getIdentificador(),
+                evento.getOrganizador()
+        );
+    }
 }
 
 

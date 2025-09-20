@@ -1,9 +1,10 @@
-package dev.feneves.Event_Code.infrastructure.presentation;
+package dev.feneves.Event_Code.infrastructure.bens;
 
 import dev.feneves.Event_Code.cors.gateway.EventoGateway;
 import dev.feneves.Event_Code.cors.usecases.buscarEventoImp;
 import dev.feneves.Event_Code.cors.usecases.criarEventoCaseImp;
-import dev.feneves.Event_Code.infrastructure.persistence.EventoRepository;
+import dev.feneves.Event_Code.cors.usecases.filtroEventoUseCase;
+import dev.feneves.Event_Code.cors.usecases.filtroEventoUseCaseImp;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -19,4 +20,10 @@ public class AppConfig {
     public buscarEventoImp buscarEventoImp(EventoGateway repository){
         return new buscarEventoImp(repository);
     }
+
+    @Bean
+    public filtroEventoUseCase filtroEventoUseCase(EventoGateway eventoGateway){
+        return  new filtroEventoUseCaseImp(eventoGateway);
+    }
+
 }
